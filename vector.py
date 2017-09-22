@@ -15,7 +15,9 @@ class Vector:
     def __abs__(self):
         return hypot(self.x, self.y)
 
-    # Python accepts any object in a boolean context. This implementation of bool returns False if the magnitude of the vector is zero.
+    # Python accepts any object in a boolean context. This implementation of bool returns False if the magnitude of the vector is zero. Another implementation would be:
+    # def __bool_(self):
+    #    return bool(self.x or self.y)
     def __bool__(self):
         return bool(abs(self))
 
